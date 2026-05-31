@@ -13,44 +13,45 @@ export default function Pricing() {
   const plans = [
     {
       name: "Basic",
-      desc: "Essentials for small shops to stay on top of stock",
+      desc: "Academic essentials for departments to host secure quiz pools",
       monthlyPriceETB: 600,
       isMostPop: false,
-      cta: "Choose Basic",
+      cta: "Get Veritas Basic",
       features: [
-        "1 location",
-        "Up to 1,000 SKUs",
-        "Real-time stock tracking",
-        "CSV import & basic analytics",
+        "Unlimited assessments",
+        "Manual/Auto grading panel",
+        "Tab-switch limit triggers",
+        "Smart mouse & activity logs",
+        "JWT secure student tokens",
       ],
     },
     {
       name: "Premium",
-      desc: "Best for teams that need automation, forecasting, and integrations",
+      desc: "Best for high-stakes university courses and screening recruitments",
       monthlyPriceETB: 1200,
       isMostPop: true,
-      cta: "Upgrade to premium",
+      cta: "Get Veritas Premium",
       features: [
-        "3 locations",
-        "Up to 10,000 SKUs",
-        "AI demand forecasting",
-        "Smart reordering & purchase orders",
-        "Shopify & marketplace sync",
-        "Email & in‑app support",
+        "Everything in Basic",
+        "Continuous facial recognition checks",
+        "Eye-gaze and pupil focus tracking",
+        "Cheating probability index reports",
+        "Automated digital certificate engine",
       ],
     },
     {
       name: "Enterprise",
-      desc: "For client-facing teams with advanced reporting and controls",
+      desc: "Multi-tenant scale for universities, large banks, and enterprises",
       monthlyPriceETB: 3900,
       isMostPop: false,
-      cta: "Upgrade to enterprise",
+      cta: "Get Veritas Enterprise",
       features: [
-        "Unlimited locations & SKUs",
-        "Team access & permissions",
-        "Custom domains & EDI/ERP integrations",
-        "Advanced dashboards & exports",
-        "Dedicated onboarding & priority support",
+        "Everything in Premium",
+        "Isolated multi-tenant workspaces",
+        "Custom domains (exams.aau.edu.et)",
+        "SSO (SAML, LDAP, OAuth2) sync",
+        "EPDPP compliant cloud residency",
+        "Priority 24/7 technical integration SLA",
       ],
     },
   ];
@@ -82,10 +83,10 @@ export default function Pricing() {
       <div className="flex flex-col gap-3 items-center text-center">
         <span className="text-xs uppercase tracking-wide px-3 py-1 rounded-full border border-border bg-background/70">Pricing</span>
         <h3 className="text-xl font-semibold sm:text-2xl bg-gradient-to-b from-foreground to-muted-foreground text-transparent bg-clip-text">
-          Pricing for every stage of your inventory & sales journey
+          Flexible Pricing Models Built for Local Institutions & Enterprises
         </h3>
         <p className="max-w-xl text-muted-foreground text-center">
-          Start free. Upgrade when you need forecasting, automation, and scale.
+          Secure your remote examinations at any scale. Pick a proctoring tier aligned with your evaluation stakes.
         </p>
       </div>
       <div className="mt-6">

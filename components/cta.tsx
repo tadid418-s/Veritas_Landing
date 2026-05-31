@@ -2,58 +2,51 @@
 
 import { Button } from "@heroui/button";
 import { Link } from "@heroui/link";
+import { motion } from "framer-motion";
 
 export default function Cta() {
   return (
-    <section id="cta" className="px-4 py-10 md:py-14">
-      <div className="w-full relative">
-        {/* subtle outer glow */}
-        <div
-          aria-hidden
-          className="pointer-events-none absolute -inset-4 rounded-[28px] bg-primary/30 blur-2xl opacity-60 dark:opacity-70"
-        />
+    <section id="cta" className="relative px-4 py-14 md:px-8 md:py-20">
+      <div className="mx-auto max-w-screen-xl">
+        <div className="relative z-10 flex items-center justify-center">
+          <div className="w-full max-w-4xl px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 18 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, type: "spring", bounce: 0 }}
+              className="mx-auto"
+            >
+              <div className="relative w-full rounded-[2.25rem] border border-border bg-card px-6 py-10 text-center shadow-sm sm:px-10 sm:py-14 transform-gpu transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_30px_90px_rgba(2,6,23,0.08)] focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400/25">
+                <div className="mx-auto flex w-fit items-center gap-2 rounded-full border border-border bg-background/80 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.22em] text-muted-foreground">
+                  Join these enterprises
+                </div>
 
-        {/* full-width card with image background */}
-        <div
-          className="relative overflow-hidden rounded-3xl border border-border z-[1] shadow-lg"
-          style={{
-            backgroundImage: "url(/Images/cta.jpg)",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        >
-          {/* gradient overlay for contrast */}
-          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/35 to-black/40" />
+                <h3 className="mx-auto mt-5 max-w-3xl text-3xl font-semibold tracking-tight text-foreground sm:text-4xl md:text-5xl">
+                  Join these enterprises and modernize your solutions.
+                </h3>
 
-          {/* content aligned to page gutters like navbar/footer */}
-          <div className="relative z-[1] max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
-            <div className="max-w-3xl text-center mx-auto">
-              <h3 className="text-3xl md:text-5xl font-semibold tracking-tight text-white">
-                Ready to optimize your inventory and sales?
-              </h3>
-              <p className="mt-4 text-sm md:text-base text-white/90">
-                InventoryOS gives you real‑time stock and sales visibility, AI demand forecasting, and automated reordering across every channel—so you never oversell or run out.
-              </p>
+                <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-muted-foreground sm:text-base">
+                  Bring secure assessments, real-time oversight, and cleaner workflows into one trusted Veritas experience for teams that need clarity at scale.
+                </p>
 
-              <div className="mt-6 flex items-center justify-center gap-3">
-                <Button as={Link} href="#pricing" color="primary" variant="shadow">
-                  Book a demo
-                </Button>
-                <Button
-                  as={Link}
-                  href="#product"
-                  variant="flat"
-                  className="bg-white/10 text-white border border-white/30 hover:bg-white/20"
-                >
-                  Explore features
-                </Button>
+                <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+                  <Button as={Link} href="#pricing" color="primary" variant="solid" className="px-7">
+                    Start now
+                  </Button>
+                  <Button
+                    as={Link}
+                    href="#system-modules"
+                    variant="flat"
+                    className="border border-border bg-background px-7 text-foreground shadow-sm transition-all duration-200 hover:border-light hover:bg-light hover:text-white"
+                  >
+                    Explore modules
+                  </Button>
+                </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
     </section>
   );
 }
-
-

@@ -23,11 +23,15 @@ const Footer = () => {
             <div className="grid grid-cols-1 md:grid-cols-4 gap-10 items-start">
               <div className="md:col-span-2 flex flex-col gap-4">
                 <div className="flex items-center gap-3">
-                  <span className="font-light tracking-tighter text-2xl">InventoryOS</span>
+                  <span className="font-light tracking-tighter text-2xl text-foreground">Veritas</span>
                 </div>
-                <p className="text-sm text-muted-foreground max-w-md">
-                  InventoryOS empowers teams to track stock and sales in real time, forecast demand with AI, and automate reordering across channels.
+                <p className="text-sm text-muted-foreground max-w-md leading-relaxed">
+                  An AI-Enhanced Online Assessment & Monitoring System designed to guarantee remote evaluation integrity with non-intrusive smart proctoring analytics.
                 </p>
+                <div className="mt-2 text-xs text-muted-foreground border-l-2 border-primary/40 pl-3">
+                  <span className="font-bold text-foreground block mb-1">Addis Ababa Science & Technology University</span>
+                  Department of Software Engineering, Oct 2025
+                </div>
 
                 <div className="flex items-center gap-3">
                   <Link href="#" aria-label="X / Twitter" className="text-muted-foreground hover:text-foreground">
@@ -43,7 +47,7 @@ const Footer = () => {
               </div>
 
               <div className="flex flex-col gap-3">
-                <span className="text-sm font-medium">Product</span>
+                <span className="text-sm font-medium">Platform</span>
                 <ul className="flex flex-col gap-2">
                   <li>
                     <Link href="#product" className={linkClass}>
@@ -61,31 +65,26 @@ const Footer = () => {
                     </Link>
                   </li>
                   <li>
-                    <Link href="#cta" className={linkClass}>
-                      Get started
+                    <Link href="#faq" className={linkClass}>
+                      FAQ
                     </Link>
                   </li>
                 </ul>
               </div>
 
               <div className="flex flex-col gap-3">
-                <span className="text-sm font-medium">Resources</span>
-                <ul className="flex flex-col gap-2">
-                  <li>
-                    <Link href="#faq" className={linkClass}>
-                      FAQ
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="#pricing" className={linkClass}>
-                      Book a demo
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="#product" className={linkClass}>
-                      Learn more
-                    </Link>
-                  </li>
+                <span className="text-sm font-medium">AASTU Project Team</span>
+                <ul className="flex flex-col gap-1.5 text-xs text-muted-foreground">
+                  <li className="font-semibold text-foreground">1. Abraham Mulugeta</li>
+                  <li className="pl-3">ID: ETS0107/14</li>
+                  <li className="font-semibold text-foreground">2. Alazar Gebre</li>
+                  <li className="pl-3">ID: ETS0132/14</li>
+                  <li className="font-semibold text-foreground">3. Tadiyos Dejene</li>
+                  <li className="pl-3">ID: ETS1522/14</li>
+                  <li className="font-semibold text-foreground">4. Tamirat Dejene</li>
+                  <li className="pl-3">ID: ETS1518/14</li>
+                  <li className="font-semibold text-foreground">5. Yohannes Tigistu</li>
+                  <li className="pl-3">ID: ETS1703/14</li>
                 </ul>
               </div>
             </div>
@@ -94,10 +93,10 @@ const Footer = () => {
 
             <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
               <div className="flex items-center gap-2 text-xs text-muted-foreground">
-                <span>© {year} InventoryOS. All rights reserved.</span>
+                <span>© {year} Veritas. All rights reserved.</span>
                 <span className="text-border">|</span>
                 <span>
-                  Made by: <Link href="https://youtu.be/dQw4w9WgXcQ?si=LWRz4BiBsrmpz0sX" target="_blank" rel="noopener noreferrer" className="text-xs underline font-semibold underline-offset-2 decoration-1 text-muted-foreground hover:text-foreground">INNOV8</Link>
+                  AASTU Software Engineering Capstone
                 </span>
               </div>
               <div className="flex items-center gap-6">

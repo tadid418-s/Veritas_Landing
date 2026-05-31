@@ -11,24 +11,26 @@ import {
 import { Link } from "@heroui/link";
 import { Button } from "@heroui/button";
 import ThemeSwitcher from "@/components/theme-switcher";
-import {
-  Dropdown,
-  DropdownTrigger,
-  DropdownMenu,
-  DropdownItem,
-} from "@heroui/dropdown";
-import {
-  ChevronDownIcon,
-  FaceIcon,
-  GlobeIcon,
-  OpenInNewWindowIcon,
-  PersonIcon,
-  TimerIcon,
-} from "@radix-ui/react-icons";
+import { useTheme } from "next-themes";
+import Image from "next/image";
+import { useEffect, useState } from "react";
 
 export default function NavBar() {
+  const { resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const logoSrc = !mounted
+    ? "/Images/Veritas_logo.png"
+    : resolvedTheme === "dark"
+      ? "/Images/Veritas_dark.png"
+      : "/Images/Veritas_logo.png";
+
   const menuItems = [
-    { name: "Product", href: "#product" },
+    { name: "Home", href: "#product" },
     { name: "Pricing", href: "#pricing" },
     { name: "Testimonials", href: "#testimonials" },
     { name: "FAQ", href: "#faq" },
@@ -41,7 +43,7 @@ export default function NavBar() {
       className="px-4 sm:px-6 lg:px-8"
       classNames={{
         wrapper: "px-0",
-        base: "bg-background/95 backdrop-blur-md",
+        base: "bg-background/90 backdrop-blur-xl",
       }}
     >
       {/* Mobile Menu Toggle */}
@@ -54,9 +56,16 @@ export default function NavBar() {
         <NavbarBrand>
           <Link
             href="/"
-            className="font-light tracking-tighter text-inherit text-lg hover:opacity-80 transition-opacity"
+            className="flex items-center gap-2 font-semibold tracking-tight text-inherit text-lg hover:opacity-80 transition-opacity"
           >
-            InventoryOS
+            <Image
+              src={logoSrc}
+              alt="Veritas logo"
+              width={28}
+              height={28}
+              className="h-7 w-7 rounded-md object-contain"
+            />
+            Veritas
           </Link>
         </NavbarBrand>
       </NavbarContent>
@@ -66,16 +75,23 @@ export default function NavBar() {
         <NavbarBrand className="mr-8">
           <Link
             href="/"
-            className="font-light tracking-tighter text-2xl hover:opacity-80 transition-opacity"
+            className="flex items-center gap-3 font-semibold tracking-tight text-2xl hover:opacity-80 transition-opacity"
           >
-            InventoryOS
+            <Image
+              src={logoSrc}
+              alt="Veritas logo"
+              width={34}
+              height={34}
+              className="h-8 w-8 rounded-lg object-contain"
+            />
+            Veritas
           </Link>
         </NavbarBrand>
         
         <div className="flex items-center gap-2">
           <NavbarItem>
             <Button as={Link} href="#product" variant="light" size="sm" className="px-3">
-              Product
+              Home
             </Button>
           </NavbarItem>
           <NavbarItem>
@@ -96,61 +112,9 @@ export default function NavBar() {
         </div>
 
         <NavbarItem>
-          <Dropdown>
-            <DropdownTrigger>
-              <Button
-                endContent={<ChevronDownIcon className="text-default-500" />}
-                variant="light"
-                size="sm"
-                className="px-3"
-              >
-                Features
-              </Button>
-            </DropdownTrigger>
-            <DropdownMenu
-              aria-label="InventoryOS features"
-              className="w-[340px]"
-              itemClasses={{
-                base: "gap-4",
-              }}
-            >
-              <DropdownItem
-                key="realtime_visibility"
-                description="Track stock levels across warehouses, stores, and channels in real time."
-                startContent={<OpenInNewWindowIcon />}
-              >
-                Real-time Visibility
-              </DropdownItem>
-              <DropdownItem
-                key="ai_forecasting"
-                description="Predict demand with AI to optimize purchasing and reduce stockouts."
-                startContent={<PersonIcon />}
-              >
-                AI Forecasting
-              </DropdownItem>
-              <DropdownItem
-                key="smart_reordering"
-                description="Automate purchase orders with supplier lead times and min/max thresholds."
-                startContent={<GlobeIcon />}
-              >
-                Smart Reordering
-              </DropdownItem>
-              <DropdownItem
-                key="multichannel_sync"
-                description="Sync inventory with Shopify, Amazon, and POS systems without overselling."
-                startContent={<TimerIcon />}
-              >
-                Multichannel Sync
-              </DropdownItem>
-              <DropdownItem
-                key="analytics"
-                description="Identify slow movers, dead stock, and reorder priorities with actionable analytics."
-                startContent={<FaceIcon />}
-              >
-                Inventory Analytics
-              </DropdownItem>
-            </DropdownMenu>
-          </Dropdown>
+            <Button as={Link} href="#system-modules" variant="light" size="sm" className="px-3">
+              System Modules
+            </Button>
         </NavbarItem>
       </NavbarContent>
 
@@ -159,13 +123,12 @@ export default function NavBar() {
         <NavbarItem className="hidden sm:flex">
           <Button
             as={Link}
-            color="primary"
             href="#pricing"
             variant="solid"
             size="sm"
-            className="px-4"
+            className="px-4 transition-all duration-200 hover:bg-light hover:text-white hover:shadow-[0_0_18px_rgba(91,168,255,0.55)]"
           >
-            Book a demo
+            Sign In
           </Button>
         </NavbarItem>
         <NavbarItem>
@@ -190,13 +153,12 @@ export default function NavBar() {
         <NavbarMenuItem className="pt-4">
           <Button
             as={Link}
-            color="primary"
             href="#pricing"
             variant="solid"
-            className="w-full"
             size="lg"
+            className="w-full transition-all duration-200 hover:bg-light hover:text-white hover:shadow-[0_0_18px_rgba(91,168,255,0.55)]"
           >
-            Book a demo
+            Sign In
           </Button>
         </NavbarMenuItem>
       </NavbarMenu>

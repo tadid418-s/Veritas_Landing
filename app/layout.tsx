@@ -15,12 +15,12 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "InventoryOS — Smart Inventory Management",
-  description: "Smart inventory for modern teams.",
+  title: "Veritas — AI-Enhanced Online Assessment & Monitoring System",
+  description: "Secure, customizable, and data-driven online examinations with smart AI proctoring, face recognition, and behavior analytics.",
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
-    apple: "/favicon.ico",
+    icon: "/Images/Veritas_logo.ico",
+    shortcut: "/Images/Veritas_logo.ico",
+    apple: "/Images/Veritas_logo.ico",
   },
 };
 
@@ -33,6 +33,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head></head>
       <body
+        suppressHydrationWarning
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Providers>{children}</Providers>

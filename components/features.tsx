@@ -12,7 +12,7 @@ import { motion } from "framer-motion";
 
 export default function Features() {
   return (
-    <section className="relative max-w-screen-xl w-full mx-auto px-4 py-24 gap-5 md:px-8 flex flex-col justify-center items-center">
+    <section id="system-modules" className="relative max-w-screen-xl w-full mx-auto px-4 py-24 gap-5 md:px-8 flex flex-col justify-center items-center">
       {/* Top Right Circular Glare */}
       <motion.div
         initial={{ opacity: 0 }}
@@ -40,12 +40,12 @@ export default function Features() {
       </motion.div>
 
       <div className="flex flex-col gap-3 text-center mb-16 relative z-10 items-center">
-        <span className="text-xs uppercase tracking-wide px-3 py-1 rounded-full border border-border bg-background/70">Features</span>
+        <span className="text-xs uppercase tracking-wide px-3 py-1 rounded-full border border-border bg-background/70">System Modules</span>
         <h2 className="text-xl font-semibold sm:text-2xl bg-gradient-to-b from-foreground to-muted-foreground text-transparent bg-clip-text">
-          Powerful Features for Smart Inventory & Sales Management
+          State-of-the-Art Proctoring & Assessment Capabilities
         </h2>
         <p className="mx-auto max-w-2xl text-muted-foreground text-center">
-          Everything you need to manage inventory and sales with intelligent automation and real-time insights.
+          Secure examination workflows with integrated intelligence, low proctor false-positives, and localized compliance parameters.
         </p>
       </div>
 
@@ -53,36 +53,36 @@ export default function Features() {
         <GridItem
           area="md:[grid-area:1/1/2/7] xl:[grid-area:1/1/2/5]"
           icon={<BarChartIcon className="h-4 w-4 text-black dark:text-neutral-400" />}
-          title="AI-Powered Stock Forecasting"
-          description="Prevent stockouts before they happen and access your inventory data at all times."
+          title="Smart Gaze & Proctoring"
+          description="Monitor pupil gaze anomalies, detect auxiliary devices, and flag abnormal posture vectors in real time."
         />
 
         <GridItem
           area="md:[grid-area:1/7/2/13] xl:[grid-area:2/1/3/5]"
           icon={<ClockIcon className="h-4 w-4 text-black dark:text-neutral-400" />}
-          title="Real-Time Inventory & Sales Tracking"
-          description="View stock levels and sales across all locations instantly with live updates and real-time synchronization."
+          title="Continuous Biometric Face ID"
+          description="Automate identity checks by capturing webcam baselines at random intervals to verify the candidate."
         />
 
         <GridItem
           area="md:[grid-area:2/1/3/7] xl:[grid-area:1/5/3/8]"
           icon={<Crosshair2Icon className="h-4 w-4 text-black dark:text-neutral-400" />}
-          title="Multi-Location Management"
-          description="Keep warehouses, branches, and stores in perfect sync with centralized inventory control."
+          title="Multi-Tenant Architecture"
+          description="Provision custom-branded exam spaces, unique candidate tokens, and independent dashboards for departments."
         />
 
         <GridItem
           area="md:[grid-area:2/7/3/13] xl:[grid-area:1/8/2/13]"
           icon={<MagnifyingGlassIcon className="h-4 w-4 text-black dark:text-neutral-400" />}
-          title="Barcode & QR Scanning"
-          description="Update inventory in seconds with mobile or handheld scanners for lightning-fast operations."
+          title="Cheating Anomaly Index"
+          description="Review precise time-stamped incident dashboards detailing browser tab-switches and active mouse pauses."
         />
 
         <GridItem
           area="md:[grid-area:3/1/4/13] xl:[grid-area:2/8/3/13]"
           icon={<BellIcon className="h-4 w-4 text-black dark:text-neutral-400" />}
-          title="Low Stock & Expiry Alerts"
-          description="Get notified before problems happen with proactive alerts and smart notifications."
+          title="Data Residency & EPDPP Act"
+          description="Fully aligned with Ethiopia's Proclamation on Personal Data Protection, offering encrypted hosting boundaries."
         />
       </ul>
     </section>

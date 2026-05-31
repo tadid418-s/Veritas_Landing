@@ -1,26 +1,27 @@
 "use client";
 import { Button } from "@heroui/react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import { MoonIcon, SunIcon } from "@radix-ui/react-icons";
 
 export default function ThemeSwitcher() {
-  const [svg, setSvg] = useState(<MoonIcon />);
-  const { theme, setTheme } = useTheme();
+  const { resolvedTheme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const handleClick = () => {
-    if (theme === "light") {
-      setTheme("dark");
-      setSvg(<MoonIcon />);
-    } else {
-      setTheme("light");
-      setSvg(<SunIcon />);
-    }
+    const nextTheme = resolvedTheme === "dark" ? "light" : "dark";
+    setTheme(nextTheme);
   };
+
+  const icon = mounted && resolvedTheme === "dark" ? <SunIcon /> : <MoonIcon />;
 
   return (
     <Button isIconOnly variant="light" onPress={handleClick}>
-      {svg}
+      {icon}
     </Button>
   );
 }

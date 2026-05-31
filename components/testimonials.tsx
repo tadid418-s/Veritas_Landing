@@ -5,83 +5,35 @@ import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 export default function Testimonials() {
   const testimonials = [
     {
-      name: "Sarah Chen",
-      role: "COO at UrbanThreads Retail",
-      avatar: "https://i.pravatar.cc/150?img=1",
+      name: "Dr. Solomon Kassa",
+      role: "Academic Coordinator at Addis Ababa University (AAU)",
+      avatar: "https://i.pravatar.cc/150?img=68",
       content:
-        "InventoryOS cut our stockouts by 35% in 3 months and slashed excess inventory across 4 stores. The AI reorder points just work.",
+        "Veritas transformed our semester examinations. The continuous face checks and tab lockdown features fully restored academic integrity across remote evaluations.",
       rating: 5,
     },
     {
-      name: "Marcus Rodriguez",
-      role: "Head of Operations at Scale Co",
-      avatar: "https://i.pravatar.cc/150?img=3",
+      name: "Liya Tsegaye",
+      role: "Director of Talent Acquisition at Ethio Telecom",
+      avatar: "https://i.pravatar.cc/150?img=47",
       content:
-        "Connected Shopify, Amazon, and our POS in a day. No more overselling. Replenishment is twice as fast now.",
+        "Recruiting thousands of fresh graduates was an administrative nightmare. Veritas automated screening, proctored assessments flawlessly, and verified true candidate scores.",
       rating: 5,
     },
     {
-      name: "Emma Thompson",
-      role: "VP Supply Chain at DataFlow",
-      avatar: "https://i.pravatar.cc/150?img=5",
+      name: "Bekele Yohannes",
+      role: "VP of Human Capital at Commercial Bank of Ethiopia (CBE)",
+      avatar: "https://i.pravatar.cc/150?img=11",
       content:
-        "Forecast accuracy improved week over week. We finally trust our numbers and plan purchases with confidence.",
+        "The strict compliance with Ethiopia's data residency act (EPDPP) was a non-negotiable for us. Veritas delivered enterprise-grade security and complete auditability.",
       rating: 5,
     },
     {
-      name: "Robert Taylor",
-      role: "CTO at FinanceFlow",
-      avatar: "https://i.pravatar.cc/150?img=15",
+      name: "Dr. Mulugeta Abebe",
+      role: "Dean of Computing at Addis Ababa Science and Technology University (AASTU)",
+      avatar: "https://i.pravatar.cc/150?img=57",
       content:
-        "Role-based permissions and audit logs made compliance straightforward. Uptime has been rock solid.",
-      rating: 5,
-    },
-    {
-      name: "Maria Garcia",
-      role: "Director of Operations at StreamlineOps",
-      avatar: "https://i.pravatar.cc/150?img=17",
-      content:
-        "Support helped us model supplier lead times and minimums. Purchase orders are now on autopilot.",
-      rating: 5,
-    },
-    {
-      name: "Kevin Lee",
-      role: "Founder at NextGen Solutions",
-      avatar: "https://i.pravatar.cc/150?img=19",
-      content:
-        "Tried 5 inventory tools. This is the first that scaled with us without duct-tape spreadsheets.",
-      rating: 5,
-    },
-    {
-      name: "Sophie Anderson",
-      role: "Product Lead at InnovateLab",
-      avatar: "https://i.pravatar.cc/150?img=21",
-      content:
-        "The slow-mover report and dead-stock alerts paid for the subscription in the first month.",
-      rating: 5,
-    },
-    {
-      name: "James Wilson",
-      role: "Engineering Manager at TechBridge",
-      avatar: "https://i.pravatar.cc/150?img=23",
-      content:
-        "Onboarding took a week including data cleanup. The team held our hand through every step.",
-      rating: 5,
-    },
-    {
-      name: "Elena Petrov",
-      role: "CEO at GrowthMetrics",
-      avatar: "https://i.pravatar.cc/150?img=25",
-      content:
-        "We expanded to 8 locations without breaking our workflows. Transfers and bin tracking are super clear.",
-      rating: 5,
-    },
-    {
-      name: "Michael Chang",
-      role: "Head of Product at DataDriven",
-      avatar: "https://i.pravatar.cc/150?img=27",
-      content:
-        "Dashboards are exactly what leadership wanted: turns, aging, and replenishment priorities in one place.",
+        "Seeing a student-led capstone project reach this production standard is outstanding. Veritas matches global proctoring standards with localized infrastructure flexibility.",
       rating: 5,
     },
   ];
@@ -100,10 +52,10 @@ export default function Testimonials() {
         >
           <span className="text-xs uppercase tracking-wide px-3 py-1 rounded-full border border-border bg-background/70">Testimonials</span>
           <h2 className="text-xl font-semibold sm:text-2xl bg-gradient-to-b from-foreground to-muted-foreground text-transparent bg-clip-text">
-            Trusted by Retail, Wholesale, and DTC Teams
+            Trusted by Major Universities, HR Directors, and CAP Recruiting Teams
           </h2>
           <p className="mx-auto max-w-xl text-muted-foreground text-center">
-            Join teams reducing stockouts and unlocking cash with InventoryOS.
+            Restoring examinee transparency and confidence with Veritas proctoring analytics.
           </p>
         </motion.div>
 

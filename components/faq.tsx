@@ -5,39 +5,34 @@ import { motion } from "framer-motion";
 export default function Faq() {
   const accordionItems = [
     {
-      title: "What makes it a 'smart' inventory system?",
+      title: "How does Veritas detect cheating without violating examinee privacy?",
       content: (
         <div className="text-muted-foreground">
-          Real-time stock visibility, AI demand forecasting, automated purchase
-          orders with supplier lead times, and multichannel syncing to prevent
-          overselling.
+          Veritas conducts proctoring calculations directly within the browser sandbox. Gaze vectors and facial landmarks are analyzed mathematically without recording, storing, or streaming raw video feeds. This safeguards student identity sovereignty completely.
         </div>
       ),
     },
     {
-      title: "Which channels and tools can I connect?",
+      title: "Is Veritas compliant with Ethiopia's Personal Data Protection Proclamation (EPDPP)?",
       content: (
         <div className="text-muted-foreground">
-          Shopify, Amazon, POS systems, and ERP/EDI via integrations. Use our
-          APIs for custom workflows.
+          Yes. Veritas supports local server deployments and end-to-end database encryption. All candidate records, exam results, and biometric features remain strictly stored in localized database residency, compliant with the legislative parameters of the Ethiopian EPDPP act.
         </div>
       ),
     },
     {
-      title: "How accurate is the forecasting?",
+      title: "Does the system support unstable internet connections (offline resiliency)?",
       content: (
         <div className="text-muted-foreground">
-          Models adapt to your seasonality and lead times. Teams typically see
-          20–30% fewer stockouts and 10–25% lower on-hand inventory after 60–90
-          days.
+          Yes. Veritas integrates offline cache-mechanisms. If a candidate experiences a temporary network drop, client-side proctoring models continue executing locally, storing time-stamped incident logs in secure memory. Once connection is re-established, the telemetry logs sync seamlessly.
         </div>
       ),
     },
     {
-      title: "Do you support multiple warehouses and locations?",
+      title: "Does Veritas automatically fail a student if an anomaly is flagged?",
       content: (
         <div className="text-muted-foreground">
-          Yes. Track transfers, bin locations, and reorder points per location.
+          No. Veritas does not take automated punitive actions. The system calculates a Cheating Probability Score and highlights activities in the admin cockpit. Final evaluation verdicts are left to authorized academic coordinators and proctors to prevent unfair penalties.
         </div>
       ),
     },
@@ -57,7 +52,7 @@ export default function Faq() {
     >
       <div className="relative w-full rounded-3xl overflow-hidden bg-card/70">
         <div className="absolute inset-0 bg-gradient-to-b from-background/80 to-light/10 dark:from-card/80 dark:to-light/5" />
-
+ 
         <div className="relative z-[1] w-full px-6 md:px-14 py-16">
           <div className="flex flex-col gap-3 justify-center items-center text-center">
             <span className="text-xs uppercase tracking-wide px-3 py-1 rounded-full border border-border bg-background/70">FAQs</span>
@@ -65,7 +60,7 @@ export default function Faq() {
               Frequently Asked Questions
             </h2>
             <p className="mx-auto max-w-4xl text-base md:text-lg text-muted-foreground">
-              Everything you need to know about InventoryOS and how it helps you manage inventory with confidence.
+              Everything you need to know about Veritas and how it helps deliver secure, transparent online examinations.
             </p>
           </div>
 
