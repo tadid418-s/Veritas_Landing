@@ -121,9 +121,9 @@ export default function NavBar() {
       {/* Right Side Actions */}
       <NavbarContent justify="end" className="gap-3">
         <NavbarItem className="hidden sm:flex">
-          <Button
+          <Button 
             as={Link}
-            href="#pricing"
+            href="https://veritas-ai-enhanced-online-examinat.vercel.app"
             variant="solid"
             size="sm"
             className="px-4 transition-all duration-200 hover:bg-light hover:text-white hover:shadow-[0_0_18px_rgba(91,168,255,0.55)]"
@@ -153,7 +153,7 @@ export default function NavBar() {
         <NavbarMenuItem className="pt-4">
           <Button
             as={Link}
-            href="#pricing"
+            href="https://veritas-ai-enhanced-online-examinat.vercel.app"
             variant="solid"
             size="lg"
             className="w-full transition-all duration-200 hover:bg-light hover:text-white hover:shadow-[0_0_18px_rgba(91,168,255,0.55)]"
