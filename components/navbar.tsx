@@ -14,6 +14,7 @@ import ThemeSwitcher from "@/components/theme-switcher";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { APP_URL } from "@/lib/config";
 
 export default function NavBar() {
   const { resolvedTheme } = useTheme();
@@ -123,7 +124,7 @@ export default function NavBar() {
         <NavbarItem className="hidden sm:flex">
           <Button 
             as={Link}
-            href="https://veritas-ai-enhanced-online-examinat.vercel.app"
+            href={APP_URL}
             variant="solid"
             size="sm"
             className="px-4 transition-all duration-200 hover:bg-light hover:text-white hover:shadow-[0_0_18px_rgba(91,168,255,0.55)]"
@@ -153,7 +154,7 @@ export default function NavBar() {
         <NavbarMenuItem className="pt-4">
           <Button
             as={Link}
-            href="https://veritas-ai-enhanced-online-examinat.vercel.app"
+            href={APP_URL}
             variant="solid"
             size="lg"
             className="w-full transition-all duration-200 hover:bg-light hover:text-white hover:shadow-[0_0_18px_rgba(91,168,255,0.55)]"

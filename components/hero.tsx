@@ -3,6 +3,7 @@ import { Button } from "@heroui/button";
 import { motion } from "framer-motion";
 import { Link } from "@heroui/link";
 import Image from "next/image";
+import { APP_URL } from "@/lib/config";
 
 export default function Hero() {
   return (
@@ -28,12 +29,12 @@ export default function Hero() {
           </p>
 
           <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row">
-            <Button as={Link} href="https://veritas-ai-enhanced-online-examinat.vercel.app" color="primary" variant="solid" className="px-6">
+            <Button as={Link} href={APP_URL} color="primary" variant="solid" className="px-6">
               Get Started
             </Button>
             <Button
               as={Link}
-              href="https://veritas-ai-enhanced-online-examinat.vercel.app"
+              href={APP_URL}
               variant="flat"
               className="border border-border bg-background/70 px-6 text-foreground transition-all duration-200 hover:border-light hover:bg-light hover:text-white hover:shadow-[0_0_18px_rgba(91,168,255,0.55)]"
             >
